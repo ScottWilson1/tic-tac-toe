@@ -1,0 +1,33 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90px;
+}
+
+.grid-container a {
+    text-decoration: none;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.top {
+    border-bottom: 2px solid black;
+}
+
+.bottom {
+    border-top: 2px solid black;
+}
+
+.left {
+    border-right: 2px solid black;
+}
+
+.right {
+    border-left: 2px solid black;
+}
