@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    </head>
+
+    <body>
+        <main>
+            <h1>Tic-Tac-Toe</h1>
+            <div class="grid-container">
+                <a href="#" id="top-left"><div class="grid-item top left">1</div></a>
+                <a href="#" id="top-center"><div class="grid-item top">2</div></a>
+                <a href="#" id="top-right"><div class="grid-item top right">3</div></a>
+                <a href="#" id="center-left"><div class="grid-item left">4</div></a>
+                <a href="#" id="center-center"><div class="grid-item">5</div></a>
+                <a href="#" id="center-right"><div class="grid-item right">6</div></a>
+                <a href="#" ide="bottom-left"><div class="grid-item bottom left">7</div></a>
+                <a href="#" id="bottom-center"><div class="grid-item bottom">8</div></a>
+                <a href="#" id="bottom-right"><div class="grid-item bottom right">9</div></a>
+            </div>
+            <form>
+                <input type="radio" id="pvp" name="game_type" value="Player vs Player">
+                <label for="pvp">Player vs Player</label><br>
+                <input type="radio" id="pvc" name="game_type" value="Player vs Computer">
+                <label for="pvc">Player vs Computer</label>
+            </form>
+            <button type="button">Start</button>
+            <button type="button">Play Again?</button>
+        </main>
+    </body>
+</html>
