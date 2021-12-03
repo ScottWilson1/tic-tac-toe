@@ -5,32 +5,43 @@
     <link rel="stylesheet" href="styles/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/tic-tac-toe_board.png">
 </head>
 <body>
     <main>
-        <h1>Tic-Tac-Toe</h1>
+        <!-- Tic-Tac-Toe -->
+        <h1><span class="tic">Tic</span>-<span class="tac">Tac</span>-<span class="toe">Toe</span></h1>
+        <div id="timer">Game Duration: <span id="time">0</span></div>
         <div class="grid-container" id="board">
-            <a href="#" id="top-left"><div class="grid-item top left">1</div></a>
-            <a href="#" id="top-center"><div class="grid-item top">2</div></a>
-            <a href="#" id="top-right"><div class="grid-item top right">3</div></a>
-            <a href="#" id="center-left"><div class="grid-item left">4</div></a>
-            <a href="#" id="center-center"><div class="grid-item">5</div></a>
-            <a href="#" id="center-right"><div class="grid-item right">6</div></a>
-            <a href="#" id="bottom-left"><div class="grid-item bottom left">7</div></a>
-            <a href="#" id="bottom-center"><div class="grid-item bottom">8</div></a>
-            <a href="#" id="bottom-right"><div class="grid-item bottom right">9</div></a>
+            <div id="c_0" class="grid-item top left"></div>
+            <div id="c_1" class="grid-item top"></div>
+            <div id="c_2" class="grid-item top right"></div>
+            <div id="c_3" class="grid-item left"></div>
+            <div id="c_4" class="grid-item"></div>
+            <div id="c_5" class="grid-item right"></div>
+            <div id="c_6" class="grid-item bottom left"></div>
+            <div id="c_7" class="grid-item bottom"></div>
+            <div id="c_8" class="grid-item bottom right"></div>
         </div>
+        <p id="message" class="messageNormal"></p>
         <form>
-            <input type="radio" id="pvp" name="game_type" value="Player vs Player">
-            <label for="pvp">Player vs Player</label><br>
-            <input type="radio" id="pvc" name="game_type" value="Player vs Computer">
-            <label for="pvc">Player vs Computer</label>
+            <div class="radio-entry">
+                <input type="radio" id="pvp" name="game_type" value="Player vs Player" checked="checked">
+                <label for="pvp">Player v Player</label><br>
+            </div>
+            <div class="radio-entry">
+                <input type="radio" id="pvc" name="game_type" value="Player vs Computer">
+                <label for="pvc">Player v Computer</label>
+            </div>
         </form>
-        <button type="button">Start</button>
-        <button type="button">Play Again?</button>
-        <p id="message"></p>
-        <p id="message2"></p>
+        <div id="button_container">
+            <button type="button" id="start" class="start">Start</button>
+            <button type="button" id="play_again" class="play-again" disabled="true">Play Again?</button>
+        </div>
     </main>
-    <script type="text/javascript" src="scripts/lib_board.js"></script>
+    <script type="text/javascript" src="scripts/game_logic.js"></script>
 </body>
 </html>
