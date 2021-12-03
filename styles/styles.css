@@ -1,33 +1,148 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 90px;
+:root {
+    --cell-width: 70px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
-.grid-container a {
-    text-decoration: none;
+body {
+    font-family: Rubik, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    padding-top: 36px;
+}
+
+.tic {
+    color: dodgerblue;
+}
+
+.tac {
+    color: orange;
+}
+
+.toe {
+    color: limegreen;
+}
+
+#timer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: calc(var(--cell-width) * 3);
+    padding: 25px;
+    border: 3px solid black;
+    border-radius: 50px;
+    justify-content: center;
+    margin: 0px auto 10px auto;
+    
 }
 
 .grid-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: var(--cell-width);
+    height: var(--cell-width);
+    font-size: 36px;
 }
 
 .top {
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
 }
 
 .bottom {
-    border-top: 2px solid black;
+    border-top: 3px solid black;
 }
 
 .left {
-    border-right: 2px solid black;
+    border-right: 3px solid black;
 }
 
 .right {
-    border-left: 2px solid black;
+    border-left: 3px solid black;
+}
+
+#message, form, #button_container {
+    text-align: center;
+}
+
+#message {
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.messageNormal {
+    font-size: 28px;
+}
+
+.messageGameEnd {
+    font-size: 44px;
+    margin: 0px;
+}
+
+form {
+    display: table;
+    margin: 0px auto 10px;
+}
+
+.radio-entry {
+    display: table-row;
+    text-align: left;
+}
+
+button {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 4px;
+}
+
+.start {
+    background-color: #ffdd9e;
+    border-color: orange;
+}
+
+.play-again {
+    background-color: #d1e8ff;
+    border-color: dodgerblue;
+}
+
+button:hover {
+    filter: brightness(92%);
+}
+
+button:active {
+    filter: brightness(108%);
+}
+
+.play-again:disabled {
+    filter: brightness(112%);
+    border-color: #9ecfff;
+}
+
+@media only screen and (min-width: 550px) {
+    html {
+        background-color: #ebebeb;
+    }
+
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
